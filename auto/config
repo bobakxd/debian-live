@@ -1,0 +1,14 @@
+#!/bin/sh
+
+set -e
+
+lb config noauto \
+	--architectures amd64 \
+	--linux-flavours amd64 \
+	--linux-packages linux-image-5.18.0-0.deb11.3 \
+	--distribution bullseye \
+	--backports true \
+	--binary-images iso \
+	--binary-filesystem ext4 \
+	--system live \
+	"${@}"
