@@ -1,0 +1,9 @@
+#!/bin/sh
+
+set -e
+
+# Update initramfs after adding linux-firmware for iwlwifi
+
+if [ -e /sbin/update-initramfs ]; then
+	update-initramfs -c -k all
+fi

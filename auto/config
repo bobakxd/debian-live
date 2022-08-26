@@ -7,6 +7,7 @@ lb config noauto \
 	--linux-flavours amd64 \
 	--linux-packages linux-image-5.18.0-0.deb11.3 \
 	--distribution bullseye \
+	--archive-areas main,non-free,contrib \
 	--backports true \
 	--binary-images iso \
 	--binary-filesystem ext4 \

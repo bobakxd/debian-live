@@ -4,3 +4,4 @@ pciutils
 kmod
 rfkill
 network-manager
+firmware-iwlwifi
