@@ -1,0 +1,32 @@
+commit 7055e87a46d352c652dd0de1e7d746a1e123c991
+Author: bobakxd <bobakxd@debian-BULLSEYE-live-builder-AMD64>
+Date:   Mon Aug 29 00:26:24 2022 +0300
+
+    Add param in the config for spacing around font
+
+diff --git a/config.def.h b/config.def.h
+index 1edb647..74f7c74 100644
+--- a/config.def.h
++++ b/config.def.h
+@@ -16,6 +16,8 @@ static const char *colors[SchemeLast][2] = {
+ /* -l option; if nonzero, dmenu uses vertical list with given number of lines */
+ static unsigned int lines      = 0;
+ 
++static const int user_bh = 2; /* 2 is the default spacing around the bar's font */
++
+ /*
+  * Characters not considered part of a word while deleting words
+  * for example: " /?\"&[]"
+diff --git a/dmenu.c b/dmenu.c
+index d95e6c6..a7c6a15 100644
+--- a/dmenu.c
++++ b/dmenu.c
+@@ -626,7 +626,7 @@ setup(void)
+ 	utf8 = XInternAtom(dpy, "UTF8_STRING", False);
+ 
+ 	/* calculate menu geometry */
+-	bh = drw->fonts->h + 2;
++	bh = drw->fonts->h + user_bh;
+ 	lines = MAX(lines, 0);
+ 	mh = (lines + 1) * bh;
+ #ifdef XINERAMA

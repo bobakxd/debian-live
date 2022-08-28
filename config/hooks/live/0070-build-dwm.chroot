@@ -1,0 +1,18 @@
+#!/bin/sh
+
+set -e
+
+# Prepare DWM source directory
+cd '/usr/src/dwm-6.3'
+wget 'https://dl.suckless.org/dwm/dwm-6.3.tar.gz'
+tar xzf 'dwm-6.3.tar.gz'
+mv dwm-6.3/* .
+rmdir 'dwm-6.3'
+
+# Apply patches
+for p in patches/*; do
+	patch < $p
+done
+
+# Build and install DWM
+make clean install

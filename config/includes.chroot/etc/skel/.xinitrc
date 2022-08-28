@@ -1,3 +1,3 @@
 #!/bin/sh
 
-exec /usr/bin/dwm
+exec /usr/local/bin/dwm

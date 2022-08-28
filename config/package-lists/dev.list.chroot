@@ -1,0 +1,7 @@
+gcc
+wget
+patch
+make
+libx11-dev
+libxft-dev
+libxinerama-dev

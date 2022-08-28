@@ -1,0 +1,16 @@
+#!/bin/sh
+
+set -e
+
+# Prepare dmenu source directory
+cd '/usr/src/dmenu-5.1'
+wget 'https://dl.suckless.org/tools/dmenu-5.1.tar.gz'
+tar xzf 'dmenu-5.1.tar.gz'
+mv dmenu-5.1/* .
+rmdir 'dmenu-5.1'
+
+# Apply patch with the line height option
+patch < dmenu-height-spacing-5.1.diff
+
+# Build and install dmenu
+make clean install
