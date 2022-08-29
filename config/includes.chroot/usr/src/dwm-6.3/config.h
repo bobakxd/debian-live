@@ -7,15 +7,15 @@ static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const int user_bh            = 4;        /* 2 is the default spacing around the bar's font */
-static const char *fonts[]          = { "monospace:size=10" };
-static const char dmenufont[]       = "monospace:size=10";
+static const char *fonts[]          = { "mononoki:style=Regular:pixelsize=14:antialias=true:autohint=true" };
+static const char dmenufont[]       = "mononoki:style=Regular:pixelsize=14:antialias=true:autohint=true";
 
 #include "catppuccin_mocha.h"
 
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_text, col_crust, col_overlay0 },
-	[SchemeSel]  = { col_base, col_red,  col_crust  },
+	[SchemeSel]  = { col_base, col_red,  col_pink  },
 	[SchemeStatus]  = { col_text, col_crust,  col_overlay0  }, // Statusbar right {text,background,not used but cannot be empty}
 	[SchemeTagsSel]  = { col_base, col_red,  col_overlay0  }, // Tagbar left selected {text,background,not used but cannot be empty}
 	[SchemeTagsNorm]  = { col_text, col_crust,  col_overlay0  }, // Tagbar left unselected {text,background,not used but cannot be empty}
@@ -33,7 +33,7 @@ static const Rule rules[] = {
 	 */
 	/* class      instance    title       tags mask     isfloating   monitor */
 	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
-	{ "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 },
+	{ "Firefox",  NULL,       NULL,       0,   	    0,           -1 },
 };
 
 /* layout(s) */
