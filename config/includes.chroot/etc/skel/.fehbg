@@ -1,0 +1,2 @@
+#!/bin/sh
+feh --no-fehbg --bg-fill '/usr/share/wallpapers/nanami_jujutsu_kaisen_2k.jpg' 
