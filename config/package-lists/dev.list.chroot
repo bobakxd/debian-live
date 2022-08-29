@@ -1,5 +1,6 @@
 gcc
 wget
+curl
 patch
 make
 libx11-dev
